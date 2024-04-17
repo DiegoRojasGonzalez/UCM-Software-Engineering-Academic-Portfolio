@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "init",
-        "build"
+        "build",
+        "style"
     ]
 }
