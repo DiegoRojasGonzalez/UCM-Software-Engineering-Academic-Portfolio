@@ -5,4 +5,4 @@ from .models import Producto
 # tambien cargamos los productos al template
 def index(request):
     productos = Producto.objects.all() 
-    return render(request, 'productos/index.html', {'productos': productos})
+    return render(request, 'index.html', {'productos': productos})
