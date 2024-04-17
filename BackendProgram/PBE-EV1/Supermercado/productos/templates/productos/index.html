@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <ul>
+        {% for producto in productos %}
+        <li>
+            Código de Barra: {{ producto.codigoBarra }}<br>
+            Nombre: {{ producto.nombre }}<br>
+            Categoría: {{ producto.categoria }}<br>
+            Precio Unitario: {{ producto.precioUnitario }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
