@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "init",
         "build",
-        "style"
+        "style",
+        "files"
     ]
 }

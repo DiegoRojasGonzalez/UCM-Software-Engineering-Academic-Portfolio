@@ -1,0 +1,71 @@
+
+use prueba1
+
+db.createCollection("Clientes")
+db.createCollection("Productos")
+db.createCollection("Ventas")
+
+db.Clientes.insert([
+    { nombre: "Pedro", edad: 35, ciudad: "Concepción" },
+    { nombre: "Luisa", edad: 25, ciudad: "Antofagasta" },
+    { nombre: "Manuel", edad: 50, ciudad: "Arica" },
+    { nombre: "Camila", edad: 30, ciudad: "La Serena" },
+    { nombre: "Javier", edad: 45, ciudad: "Viña del Mar" },
+    { nombre: "Carmen", edad: 55, ciudad: "Puerto Montt" },
+    { nombre: "Diego", edad: 22, ciudad: "Talca" },
+    { nombre: "Fernanda", edad: 27, ciudad: "Temuco" },
+    { nombre: "Gonzalo", edad: 33, ciudad: "Iquique" },
+    { nombre: "Carolina", edad: 42, ciudad: "Rancagua" },
+    { nombre: "Francisco", edad: 38, ciudad: "Copiapó" },
+    { nombre: "Valentina", edad: 29, ciudad: "Los Ángeles" },
+    { nombre: "Andrés", edad: 47, ciudad: "Calama" },
+    { nombre: "Gabriela", edad: 32, ciudad: "Osorno" },
+    { nombre: "Felipe", edad: 36, ciudad: "Punta Arenas" }
+])
+
+db.Productos.insertMany([
+    { nombre: "Producto C", existencia: 10, precio: 1800 },
+    { nombre: "Producto D", existencia: 5, precio: 2500 },
+    { nombre: "Producto E", existencia: 15, precio: 3000 },
+    { nombre: "Producto F", existencia: 8, precio: 1700 },
+    { nombre: "Producto G", existencia: 3, precio: 2200 },
+    { nombre: "Producto H", existencia: 12, precio: 1900 },
+    { nombre: "Producto I", existencia: 7, precio: 2600 },
+    { nombre: "Producto J", existencia: 9, precio: 2100 },
+    { nombre: "Producto K", existencia: 11, precio: 2300 },
+    { nombre: "Producto L", existencia: 6, precio: 2800 },
+    { nombre: "Producto M", existencia: 4, precio: 2400 },
+    { nombre: "Producto N", existencia: 13, precio: 1700 },
+    { nombre: "Producto O", existencia: 2, precio: 2900 },
+    { nombre: "Producto P", existencia: 14, precio: 2000 },
+    { nombre: "Producto Q", existencia: 1, precio: 3100 }
+])
+
+db.Ventas.insert([
+    { cliente: 1, producto: 2, cantidad: 2 },
+    { cliente: 1, producto: 9, cantidad: 7 },
+    { cliente: 1, producto: 4, cantidad: 4 },
+    { cliente: 1, producto: 3, cantidad: 6 },
+    { cliente: 2, producto: 5, cantidad: 3 },
+    { cliente: 2, producto: 2, cantidad: 8 },
+    { cliente: 2, producto: 3, cantidad: 1 },
+    { cliente: 2, producto: 9, cantidad: 5 },
+    { cliente: 1, producto: 6, cantidad: 3 },
+    { cliente: 1, producto: 2, cantidad: 2 },
+    { cliente: 2, producto: 1, cantidad: 4 },
+    { cliente: 1, producto: 2, cantidad: 7 },
+    { cliente: 1, producto: 2, cantidad: 6 },
+    { cliente: 2, producto: 2, cantidad: 9 },
+    { cliente: 3, producto: 1, cantidad: 3 }
+])
+
+db.Clientes.find({})
+
+db.Productos.find({ existencia: 0 })
+
+db.Clientes.find({ edad: { $gt: 35 } })
+
+db.Productos.updateOne({ nombre: "Producto A" }, { $inc: { existencia: 10 } })
+
+db.Productos.find({ existencia: { $gt: 0 }, precio: { $gt: 1000 } })
+
