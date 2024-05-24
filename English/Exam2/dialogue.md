@@ -1,7 +1,10 @@
 Oscar (Product Manager): Hey Diego, have you looked into the bug affecting Kotorina in the game?
 
-# Diego Rojas (Developer): Yes, I've been on it all morning. It seems like a tricky one. First, I'll check
-# the character's code again. Then, I'm going to try a different approach to debug it. Finally, we will test the solution with precision.
+# Diego Rojas (Developer): Yes, I've been on it all morning. 
+# It seems like a tricky one. 
+# First, I'll check the character's code again. 
+# Then, I'm going to try a different approach to debug it. 
+# Finally, we will test the solution with precision.
 
 Oscar: That sounds good. First, we need to fix it before the next update. We will need to address this bug as soon as possible.
 
