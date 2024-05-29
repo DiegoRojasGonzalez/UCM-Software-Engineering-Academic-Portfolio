@@ -21,8 +21,14 @@ source env/bin/activate
 
 
 ### 3 Install dependencies
+
 ```
 pip install -r requirements.txt
+```
+
+### 4 Run 
+```
+python manage.py runsrver
 ```
 
 # Django admin
