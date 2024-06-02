@@ -3,6 +3,7 @@
         "init",
         "build",
         "style",
-        "files"
+        "files",
+        "db"
     ]
 }
