@@ -1,1 +1,9 @@
-<h1>Hello world</h1>
+<form action="{% url 'agregar_pelicula' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="titulo" placeholder="Título">
+    <input type="text" name="genero" placeholder="Género">
+    <input type="number" name="año_lanzamiento" placeholder="Año de lanzamiento">
+    <textarea name="descripcion" placeholder="Descripción"></textarea>
+    <input type="text" name="duracion" placeholder="Duración">
+    <button type="submit">Agregar Película</button>
+</form>

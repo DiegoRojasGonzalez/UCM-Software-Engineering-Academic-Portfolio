@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -77,12 +78,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'proyect',
-        'CLIENT':{
-            'host': 'mongodb://root:root@localhost:27017',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017',
             'username': 'root',
             'password': 'root',
             'authSource': 'admin'
-        }
+        },
+        'CONN_MAX_AGE': None,  # Evita que Django cierre la conexión con MongoDB
     }
 }
 
