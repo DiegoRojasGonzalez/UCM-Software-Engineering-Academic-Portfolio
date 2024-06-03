@@ -72,7 +72,7 @@
             <td>{{ p.titulo }}</td>
             <td>{{ p.genero }}</td>
             <td>{{ p.año_lanzamiento }}</td>
-            <td>{{ p.descripcion }}</td>
+            <td>{{ p.descripcion|slice:":20 " }}...</td>
             <td>{{ p.duracion }}</td>
             <td>
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
@@ -98,6 +98,65 @@
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger">Eliminar</button>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal{{ p.pk }}">
+                    Editar
+                </button>
+                <div class="modal fade" id="editModal{{ p.pk }}" tabindex="-1" role="dialog"
+                    aria-labelledby="editModalLabel{{ p.pk }}" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel{{ p.pk }}">Editar Película</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="editForm{{ p.pk }}" method="post" action="{% url 'updateMovie' p.pk %}">
+
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="titulo">Título:</label>
+                                        <input type="text" class="form-control" id="titulo" name="titulo"
+                                            value="{{ p.titulo }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="genero">Género</label>
+                                        <select class="form-control" id="genero" name="genero">
+                                            <option value="{{ p.genero }}">{{ p.genero }}</option>
+                                            <option value="Acción">Acción</option>
+                                            <option value="Aventura">Aventura</option>
+                                            <option value="Animación">Animación</option>
+                                            <option value="Comedia">Comedia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ano">Año de Lanzamiento:</label>
+                                        <input type="text" class="form-control" id="ano" name="ano"
+                                            value="{{ p.año_lanzamiento }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="descripcion">Descripción:</label>
+                                        <textarea class="form-control" id="descripcion"
+                                            name="descripcion">{{ p.descripcion }}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="duracion">Duración:</label>
+                                        <input type="text" class="form-control" id="duracion" name="duracion"
+                                            value="{{ p.duracion }}">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" form="editForm{{ p.pk }}" class="btn btn-primary">Guardar
+                                    Cambios</button>
                             </div>
                         </div>
                     </div>
