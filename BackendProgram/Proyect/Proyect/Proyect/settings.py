@@ -78,14 +78,13 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'proyect',
         'CLIENT':{
-            'host': 'mongodb://root:root@localhost:27017/proyect?authSource=admin',
+            'host': 'mongodb://root:root@localhost:27017',
             'username': 'root',
             'password': 'root',
             'authSource': 'admin'
         }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
