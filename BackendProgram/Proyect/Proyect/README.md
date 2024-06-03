@@ -8,7 +8,12 @@ docker compose up
 
 ### 1 Create virtual env 
 ```
+- Windows
+python -m venv env
+
+- Linux 
 python3 -m venv env
+
 ```
 
 ### 2 Active virtual env
