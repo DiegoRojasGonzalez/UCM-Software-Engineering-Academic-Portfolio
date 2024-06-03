@@ -6,6 +6,12 @@ from bson import ObjectId
 # Create your views here.
 
 # Index View 
+def login(request):
+    return render(request, 'login.html')
+
+def register(request):
+    return render(request, 'register.html')
+
 def loadIndex(request):
     peliculas = Pelicula.objects.all()
     return render(request, 'index.html', {'peliculas': peliculas})
@@ -59,3 +65,4 @@ def updateMovie(request, pelicula_id):
         return redirect('index')
     else:
         return JsonResponse({'error': 'Se esperaba una solicitud PUT o PATCH'})
+
