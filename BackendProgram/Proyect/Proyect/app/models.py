@@ -1,9 +1,10 @@
 from django.db import models
+from djongo import models
 
 class Pelicula(models.Model):
-    pelicula_id = models.UUIDField(primary_key=True)
+    _id = models.ObjectIdField()
     titulo = models.TextField()
-    genero = models.JSONField()
+    genero = models.TextField()
     año_lanzamiento = models.IntegerField()
     descripcion = models.TextField()
     duracion = models.TextField()

@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.http import JsonResponse
 from .models import Pelicula
+import uuid
 
 # Create your views here.
 
@@ -11,7 +12,6 @@ def loadIndex(request):
 
 def addMovie(request):
     if request.method == 'POST':
-        # Obtener los datos del formulario
         titulo = request.POST.get('titulo')
         genero = request.POST.get('genero')
         año_lanzamiento = request.POST.get('ano')

@@ -3,7 +3,6 @@
     Agregar Película
 </button>
 
-<!-- Modal -->
 <div class="modal fade" id="addMovieModal" tabindex="-1" aria-labelledby="addMovieModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -64,6 +63,7 @@
 <table id="peliculasTable" class="display" border="1">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Título</th>
             <th>Género</th>
             <th>Año de Lanzamiento</th>
@@ -74,6 +74,7 @@
     <tbody>
         {% for p in peliculas %}
         <tr>
+            <td>{{ p.pk  }}</td>
             <td>{{ p.titulo }}</td>
             <td>{{ p.genero }}</td>
             <td>{{ p.año_lanzamiento }}</td>
