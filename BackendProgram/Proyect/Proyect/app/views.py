@@ -32,7 +32,7 @@ def addMovie(request):
     return JsonResponse({'error': 'Se esperaba una solicitud POST'})
 
 def deleteMovie(request, pelicula_id):
-    if request.method == 'POST' and request.POST.get('_method') == 'DELETE':
+    if request.method == 'POST':
         pelicula_id_object = ObjectId(pelicula_id)
         pelicula = Pelicula.objects.get(_id=pelicula_id_object)
         pelicula.delete()
