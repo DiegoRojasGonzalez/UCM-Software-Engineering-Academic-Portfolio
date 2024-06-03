@@ -2,8 +2,34 @@
     {% csrf_token %}
     <input type="text" name="titulo" placeholder="Título">
     <input type="text" name="genero" placeholder="Género">
-    <input type="number" name="año_lanzamiento" placeholder="Año de lanzamiento">
+    <input type="number" name="ano" placeholder="Año de lanzamiento">
     <textarea name="descripcion" placeholder="Descripción"></textarea>
     <input type="text" name="duracion" placeholder="Duración">
     <button type="submit">Agregar Película</button>
 </form>
+
+<br>
+
+<h1>Lista de Películas</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Género</th>
+            <th>Año de Lanzamiento</th>
+            <th>Descripción</th>
+            <th>Duración</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in peliculas %}
+        <tr>
+            <td>{{ p.titulo }}</td>
+            <td>{{ p.genero }}</td>
+            <td>{{ p.año_lanzamiento }}</td>
+            <td>{{ p.descripcion }}</td>
+            <td>{{ p.duracion }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import JsonResponse
 from .models import Pelicula
 
@@ -6,14 +6,15 @@ from .models import Pelicula
 
 # Index View 
 def loadIndex(request):
-    return render(request, 'index.html')
+    peliculas = Pelicula.objects.all()
+    return render(request, 'index.html', {'peliculas': peliculas})
 
 def addMovie(request):
     if request.method == 'POST':
         # Obtener los datos del formulario
         titulo = request.POST.get('titulo')
         genero = request.POST.get('genero')
-        año_lanzamiento = request.POST.get('año_lanzamiento')
+        año_lanzamiento = request.POST.get('ano')
         descripcion = request.POST.get('descripcion')
         duracion = request.POST.get('duracion')
 
@@ -28,7 +29,8 @@ def addMovie(request):
         pelicula.save()
 
         # Retornar una respuesta JSON
-        return JsonResponse({'mensaje': 'Película agregada correctamente'})
+        return redirect('index')
+
 
     # Si no es un método POST, retornar un error
     return JsonResponse({'error': 'Se esperaba una solicitud POST'})
