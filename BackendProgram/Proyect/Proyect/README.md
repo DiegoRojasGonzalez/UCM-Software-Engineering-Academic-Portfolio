@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### 4 Run 
 ```
-python manage.py runsrver
+python manage.py runserver
 ```
 
 # Django admin
