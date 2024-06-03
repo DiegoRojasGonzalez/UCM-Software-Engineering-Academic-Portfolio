@@ -1,16 +1,29 @@
 <nav class="navbar navbar-light bg-light justify-content-between">
-    <a class="navbar-brand"></a>
+    {% if user.is_authenticated %}
+    {% if user.is_staff %}
+    <a class="navbar-brand ml-4">Bienvenido Administrador | {{ user.username }}</a>
+    {% else %}
+    <a class="navbar-brand ml-4">Bienvenido Usuario | {{ user.username }}</a>
+    {% endif %}
+    {% endif %}
+
     <form class="form-inline">
-        <a class="mr-5" href="/admin"><button class="btn btn-outline-success " type="button" data-toggle="modal"
+        {% if user.is_authenticated %}
+        {% if user.is_staff %}
+        <a class="mr-5" href="/admin">
+            <button class="btn btn-outline-success " type="button" data-toggle="modal"
                 data-target="#addMovieModal">Admin Menu</button>
         </a>
+        {% endif %}
+        {% endif %}
+
         <button class="btn btn-outline-primary mr-5" type="button" data-toggle="modal" data-target="#addUser">Agregar
             Usuario</button>
 
         <button class="btn btn-outline-primary mr-5" type="button" data-toggle="modal"
             data-target="#addMovieModal">Agregar Pelicula</button>
 
-        <a href="{% url 'logout' %}"><button class="btn btn-outline-primary " type="button">CerrarSesión</button>
+        <a href="{% url 'logout' %}"><button class="btn btn-outline-dark  mr-5" type="button">Salir </button>
         </a>
     </form>
 </nav>
