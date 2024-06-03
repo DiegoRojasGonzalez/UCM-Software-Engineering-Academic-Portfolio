@@ -37,6 +37,12 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
+### Create admin 
+
+```
+python manage.py createsuperuser
+```
+
 # Django admin
 
 username : admin
@@ -53,5 +59,5 @@ mail : admin@admin.cl
 
 - Index app 'app'
 ```
-/app/indexView/
+/app/home/
 ```
