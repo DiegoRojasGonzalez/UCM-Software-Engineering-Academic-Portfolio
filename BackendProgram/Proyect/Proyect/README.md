@@ -1,5 +1,11 @@
 # Run project 
 
+### 0 Run mongo
+
+```
+docker compose up 
+```
+
 ### 1 Create virtual env 
 ```
 python3 -m venv env
