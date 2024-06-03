@@ -1,17 +1,67 @@
-<form action="{% url 'addMovie' %}" method="post">
-    {% csrf_token %}
-    <input type="text" name="titulo" placeholder="Título">
-    <input type="text" name="genero" placeholder="Género">
-    <input type="number" name="ano" placeholder="Año de lanzamiento">
-    <textarea name="descripcion" placeholder="Descripción"></textarea>
-    <input type="text" name="duracion" placeholder="Duración">
-    <button type="submit">Agregar Película</button>
-</form>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal">
+    Agregar Película
+</button>
 
-<br>
+<!-- Modal -->
+<div class="modal fade" id="addMovieModal" tabindex="-1" aria-labelledby="addMovieModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addMovieModalLabel">Agregar Película</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'addMovie' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Género</label>
+                        <select class="form-control" id="genero" name="genero">
+                            <option value="">Seleccione un género</option>
+                            <option value="Acción">Acción</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Animación">Animación</option>
+                            <option value="Comedia">Comedia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Año de lanzamiento</label>
+                        <input type="number" class="form-control" id="ano" name="ano" placeholder="Año de lanzamiento">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="duracion">Duración</label>
+                        <input type="text" class="form-control" id="duracion" name="duracion" placeholder="Duración">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Película</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<head>
+    <!-- Incluye el CSS de DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <!-- Incluye jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Incluye el JS de DataTables -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+</head>
 
 <h1>Lista de Películas</h1>
-<table border="1">
+<table id="peliculasTable" class="display" border="1">
     <thead>
         <tr>
             <th>Título</th>
@@ -33,3 +83,10 @@
         {% endfor %}
     </tbody>
 </table>
+
+<script>
+    $(document).ready(function() {
+        $('#peliculasTable').DataTable();
+    });
+</script>
+
