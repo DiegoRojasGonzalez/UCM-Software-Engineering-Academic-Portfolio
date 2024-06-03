@@ -1,18 +1,16 @@
 <nav class="navbar navbar-light bg-light justify-content-between">
     <a class="navbar-brand"></a>
     <form class="form-inline">
-        <a class="mr-5" href="/"><button class="btn btn-outline-success " type="button" data-toggle="modal"
+        <a class="mr-5" href="/admin"><button class="btn btn-outline-success " type="button" data-toggle="modal"
                 data-target="#addMovieModal">Admin Menu</button>
         </a>
+        <button class="btn btn-outline-primary mr-5" type="button" data-toggle="modal" data-target="#addUser">Agregar
+            Usuario</button>
+
         <button class="btn btn-outline-primary mr-5" type="button" data-toggle="modal"
-            data-target="#addMovieModal">Agregar</button>
+            data-target="#addMovieModal">Agregar Pelicula</button>
 
-        <a href="{% url 'logout' %}"><button class="btn btn-outline-primary " type="button" data-toggle="modal"
-                data-target="#addMovieModal">Cerrar
-                Sesión</button>
+        <a href="{% url 'logout' %}"><button class="btn btn-outline-primary " type="button">CerrarSesión</button>
         </a>
-
-
-
     </form>
 </nav>

@@ -53,10 +53,18 @@ def register(request):
 
     return render(request, 'register.html')
 
-@login_required
+# SOLO PARA DETERMINAR SI CARGAR LOGIN O NO 
 def loadIndex(request):
+    if request.user.is_authenticated:  
+        return loadMovies(request)
+    else:
+        return redirect('login') 
+
+@login_required
+def loadMovies(request):
     peliculas = Pelicula.objects.all()
-    return render(request, 'index.html', {'peliculas': peliculas})
+    return render(request, 'index.html', {'peliculas': peliculas}) 
+    
 
 @login_required
 def addMovie(request):
