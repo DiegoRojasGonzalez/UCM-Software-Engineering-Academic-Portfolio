@@ -9,8 +9,3 @@ class Pelicula(models.Model):
     descripcion = models.TextField()
     duracion = models.TextField()
 
-class Usuario(AbstractUser):
-    favoritas = models.JSONField(default=list)
-    lista_para_ver = models.JSONField(default=list)
-    pass
-
