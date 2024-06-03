@@ -1,7 +1,8 @@
 from django.shortcuts import redirect, render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseForbidden
 from .models import Pelicula
-import uuid
+from bson import ObjectId
+
 
 # Create your views here.
 
@@ -34,3 +35,12 @@ def addMovie(request):
 
     # Si no es un método POST, retornar un error
     return JsonResponse({'error': 'Se esperaba una solicitud POST'})
+
+def deleteMovie(request, pelicula_id):
+    if request.method == 'POST' and request.POST.get('_method') == 'DELETE':
+        pelicula_id_object = ObjectId(pelicula_id)
+        pelicula = Pelicula.objects.get(_id=pelicula_id_object)
+        pelicula.delete()
+        return redirect('index')
+    else:
+        return HttpResponseForbidden()

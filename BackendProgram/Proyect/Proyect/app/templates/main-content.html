@@ -1,8 +1,3 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal">
-    Agregar Película
-</button>
-
 <div class="modal fade" id="addMovieModal" tabindex="-1" aria-labelledby="addMovieModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -35,7 +30,8 @@
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripción</label>
-                        <textarea class="form-control" id="descripcion" name="descripcion" placeholder="Descripción"></textarea>
+                        <textarea class="form-control" id="descripcion" name="descripcion"
+                            placeholder="Descripción"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="duracion">Duración</label>
@@ -48,15 +44,12 @@
     </div>
 </div>
 
-
-
 <head>
-    <!-- Incluye el CSS de DataTables -->
+    <!-- Data tables cdn -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-    <!-- Incluye jQuery -->
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <!-- Incluye el JS de DataTables -->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 </head>
 
 <h1>Lista de Películas</h1>
@@ -69,25 +62,61 @@
             <th>Año de Lanzamiento</th>
             <th>Descripción</th>
             <th>Duración</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
         {% for p in peliculas %}
         <tr>
-            <td>{{ p.pk  }}</td>
+            <td>{{ p.pk }}</td>
             <td>{{ p.titulo }}</td>
             <td>{{ p.genero }}</td>
             <td>{{ p.año_lanzamiento }}</td>
             <td>{{ p.descripcion }}</td>
             <td>{{ p.duracion }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                    Eliminar
+                </button>
+                <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog"
+                    aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Eliminación</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ¿Estás seguro de que quieres eliminar esta película?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <form id="deleteForm" action="{% url 'deleteMovie' p.pk %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+
         </tr>
         {% endfor %}
     </tbody>
 </table>
 
+
+
+
+
+
 <script>
-    $(document).ready(function() {
+    //Solo para el data table
+    $(document).ready(function () {
         $('#peliculasTable').DataTable();
     });
 </script>
-

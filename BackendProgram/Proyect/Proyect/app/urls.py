@@ -2,6 +2,8 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('home/', loadIndex, name='index'),
-    path('addMovie/', addMovie, name='addMovie'), # POST AGREGAR PELICULA 
+    path('home/', loadIndex, name='index'),                                     # GET
+    path('addMovie/', addMovie, name='addMovie'),                               # POST 
+    path('deleteMovie/<str:pelicula_id>/', deleteMovie, name='deleteMovie'),    # DELETE
+
 ]
