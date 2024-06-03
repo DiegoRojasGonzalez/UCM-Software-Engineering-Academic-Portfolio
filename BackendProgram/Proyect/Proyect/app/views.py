@@ -8,7 +8,7 @@ from .models import Pelicula
 def loadIndex(request):
     return render(request, 'index.html')
 
-def agregar_pelicula(request):
+def addMovie(request):
     if request.method == 'POST':
         # Obtener los datos del formulario
         titulo = request.POST.get('titulo')

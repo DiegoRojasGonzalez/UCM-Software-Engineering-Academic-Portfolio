@@ -1,4 +1,4 @@
-<form action="{% url 'agregar_pelicula' %}" method="post">
+<form action="{% url 'addMovie' %}" method="post">
     {% csrf_token %}
     <input type="text" name="titulo" placeholder="Título">
     <input type="text" name="genero" placeholder="Género">
