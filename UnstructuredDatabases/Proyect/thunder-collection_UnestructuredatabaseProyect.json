@@ -1,0 +1,134 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "UnestructuredatabaseProyect",
+    "collectionId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+    "dateExported": "2024-06-16T18:13:50.065Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "94f7f229-6b52-421c-a77c-ea842bb6c89b",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "REPORTE 1 - Reporte de Películas por Año de Estreno:",
+            "url": "http://localhost:3000/reporte1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-16T18:09:41.278Z",
+            "modified": "2024-06-16T18:09:41.278Z",
+            "headers": []
+        },
+        {
+            "_id": "412a3be1-5ad7-4340-91b9-8d49c63c9157",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "REPORTE 2 - Reporte de Películas por Género:",
+            "url": "http://localhost:3000/reporte2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-16T18:09:52.778Z",
+            "modified": "2024-06-16T18:09:52.778Z",
+            "headers": []
+        },
+        {
+            "_id": "bf5f97be-cd97-4a26-a787-c07effa1c514",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "REPORTE 3 - Reporte de Películas con Mayor Puntuación:",
+            "url": "http://localhost:3000/reporte3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-16T18:09:58.139Z",
+            "modified": "2024-06-16T18:09:58.139Z",
+            "headers": []
+        },
+        {
+            "_id": "04b83319-54a0-40ea-8768-5aa122ef7dd7",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "REPORTE 4 - Reporte de Películas por Director:",
+            "url": "http://localhost:3000/reporte4",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-06-16T18:10:23.289Z",
+            "modified": "2024-06-16T18:10:23.289Z",
+            "headers": []
+        },
+        {
+            "_id": "823284fd-15e0-438e-9468-afb6483f934d",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "REPORTE 5 - Reporte de Películas por Duración:",
+            "url": "http://localhost:3000/reporte5",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-06-16T18:10:31.840Z",
+            "modified": "2024-06-16T18:10:31.841Z",
+            "headers": []
+        },
+        {
+            "_id": "d3485aaa-b8f5-4a62-97dc-efbf2239b558",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "GET ALL PELICULAS",
+            "url": "http://localhost:3000/items",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-06-16T18:10:38.818Z",
+            "modified": "2024-06-16T18:10:38.818Z",
+            "headers": []
+        },
+        {
+            "_id": "0640e076-9864-46dd-b5c6-278d8492f682",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "Transaccion | Agregar peliculas",
+            "url": "http://localhost:3000/items",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-06-16T18:10:56.802Z",
+            "modified": "2024-06-16T18:10:56.802Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"tittle\": \"Matilda\",\n  \"anno\": 1996,\n  \"genere\": \"Coemdia\",\n  \"points\": 9.5,\n  \"director\": \"Danny DeVito\",\n  \"time_minuts\": 98\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6cbba59d-f463-4883-862f-9f7dfbb4a65c",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "Transaccion | Eliminar todas las películas de un género específico:",
+            "url": "http://localhost:3000/eliminar-peliculas",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-06-16T18:11:06.864Z",
+            "modified": "2024-06-16T18:11:06.864Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"genero\": \"Drama\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "31173a15-59f6-4ffb-8184-33c38a922c87",
+            "colId": "dcd7253a-6025-4251-bb5d-e6fff0d78c9d",
+            "containerId": "",
+            "name": "Transaccion | Cambiar el género de todas las películas según el año:",
+            "url": "http://localhost:3000/cambiar-genero",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-06-16T18:11:31.137Z",
+            "modified": "2024-06-16T18:11:31.137Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"anno\": 1996,\n    \"nuevoGenero\": \"Comedia\"\n}\n",
+                "form": []
+            }
+        }
+    ],
+    "ref": "XajVV6ibMS5PYaeb05212yfIil-3Q4hjjBZbIiu2RAPkY-7nX6q1McaQXf6iiiCge65cB5Fr14a_pIheuFwlYg"
+}
