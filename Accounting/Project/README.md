@@ -11,7 +11,7 @@
 
 ## Paso 1:
 
--   Abre una terminal y navega al directorio `/Proyect`. Luego, inicia una sesión de R:
+-   Abre una terminal y navega al directorio `/Project`. Luego, inicia una sesión de R:
 
 ```sh
 R

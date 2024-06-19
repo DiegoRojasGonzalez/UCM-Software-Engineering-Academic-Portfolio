@@ -1,4 +1,4 @@
-library(jsonlite)
+#library(jsonlite)
 
 datatojson <- function(text) {
 
@@ -40,4 +40,17 @@ datatojson <- function(text) {
     json_output <- toJSON(json_data, pretty = TRUE)
     
     return(json_output)
+}
+
+
+jsontoresults <|- function(path) {
+    # open file whith path parameter
+    file <- file(path, "r")
+    
+    # read file
+    data <- readLines(file)
+    
+    # close file
+    close(file)
+    
 }
