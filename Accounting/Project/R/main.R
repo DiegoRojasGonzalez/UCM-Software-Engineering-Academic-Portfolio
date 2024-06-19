@@ -26,11 +26,11 @@ library(jsonlite)
 #cat("JSON guardado en", file_path, "\n")
 
 
-#! STEP 2 (REGRESIÓN LINEAL)
+#! STEP 2 (REGRESIÓN LINEAL) - USED
 
 # Ejecutar la función
-resultados <- regresion_lineal("./data/processed/dataRefactor.json")
+results <- linear_regression("./data/processed/dataRefactor.json")
 
-crear_graficos_separados(resultados)
+create_graphs(results)
 
-print(resultados)
+print(results)
