@@ -65,7 +65,7 @@ linear_regression <- function(file_path) {
         Gananciasporventas_Mayoristas = pred_major,
         Gananciasporventas_Minoristas = pred_minor)
     
-    df_resultado <- rbind(df, predicciones)
+    df_resultado <- rbind(df, predictions)
     
     return(df_resultado)
 }
