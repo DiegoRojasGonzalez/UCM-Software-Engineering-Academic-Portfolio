@@ -1,6 +1,6 @@
 # install project
 
--   up docker with
+-   up mysql database
 
 ```sh
 docker-compose up
@@ -26,13 +26,24 @@ source virtualenv/bin/activate
 pip install -r requirements.txt
 ```
 
--   models
+-   database config on `/project/project/settings.py`
 
 ```py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydatabase',
+        'USER': 'root',
+        'PASSWORD': 'rootpassword',
+        'HOST': '172.19.0.2',
+        'PORT': '3306',
+    }
+}
+```
 
-from django.db import models
+-   models config on `/project/Customer/models.py`
 
-# Create your models here.
+```py
 
 class Customer(models.Model):
 first_name = models.CharField(max_length=99)
