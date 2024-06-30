@@ -26,6 +26,19 @@ source virtualenv/bin/activate
 pip install -r requirements.txt
 ```
 
+-   create super admin config
+
+`````sh
+python3 manage.py createsuperuser
+````
+
+````sh
+
+Username : admin
+Email address: admin@admin.cl
+Password: admin
+```
+
 -   database config on `/project/project/settings.py`
 
 ```py
@@ -39,7 +52,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-```
+`````
 
 -   models config on `/project/Customer/models.py`
 
