@@ -15,7 +15,9 @@
         "jsonlite",
         "libpoppler",
         "poppler",
-        "renv"
+        "renv",
+        "venv",
+        "virtualenv"
     ],
     "cSpell.ignoreWords": [
         "Gananciasporventas",
