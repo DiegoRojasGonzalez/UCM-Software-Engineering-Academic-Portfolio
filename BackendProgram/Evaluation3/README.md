@@ -18,4 +18,10 @@ python3 -m venv virtualenv
 source virtualenv/bin/activate
 ```
 
-> NOTE : (LINUX) If activate don't work use : `chmod +x ./virtualenv/bin/activate`
+-   install requirements
+
+```sh
+pip install -r requirements.txt
+```
+
+> NOTE : If activate don't work use : `chmod +x ./virtualenv/bin/activate`
