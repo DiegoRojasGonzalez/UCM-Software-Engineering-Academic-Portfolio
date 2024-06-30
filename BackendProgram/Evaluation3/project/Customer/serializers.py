@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework_simplejwt.serializers import TokenRefreshSerializer
 from .models import Customer , Address
 
 class CustomerSerializer(serializers.ModelSerializer):
@@ -37,3 +38,5 @@ class AddressSerializer(serializers.ModelSerializer):
         instance.country = validated_data.get('country', instance.country)
         instance.save()
         return instance
+
+

@@ -1,20 +1,19 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
 from rest_framework import status
-from rest_framework.views import APIView
-
-from Customer.models import Customer, Address
-from Customer.serializers import CustomerSerializer,  AddressSerializer
+from rest_framework.permissions import IsAuthenticated
+from .serializers import CustomerSerializer, AddressSerializer
+from .models import Customer, Address
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated]) 
 def customers(request):
     customers = Customer.objects.all()
     serializer = CustomerSerializer(customers, many=True)
     return Response(serializer.data)
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated]) 
 def customer(request, id=0):
     if request.method == 'GET':
         try:
@@ -56,6 +55,7 @@ def customer(request, id=0):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated]) 
 def address(request, id=0):
 
     if request.method == 'GET':
