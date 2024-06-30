@@ -1,0 +1,217 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Evaluation3BckendDiegoRojas",
+    "collectionId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+    "dateExported": "2024-06-30T20:15:42.617Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "593060a5-fec9-49ca-97b0-b72316788f48",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "API | OBTAIN TOKEN",
+            "url": "http://localhost:8000/token/",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2024-06-30T20:02:40.516Z",
+            "modified": "2024-06-30T20:04:04.146Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"admin\",\n  \"password\":\"admin\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc3OTU1LCJpYXQiOjE3MTk3Nzc2NTUsImp0aSI6IjgxNWVmYTRjMDViNDRjNzliNjYwNTQwODEwY2ZkOTQ2IiwidXNlcl9pZCI6MX0.Dm3P7yPdQfaXojiwBaxC6Rbr9C7_I5AlsLIaWcu2lP8"
+            }
+        },
+        {
+            "_id": "a9c1eaca-37c4-4aef-a544-1d8714455e4f",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Customer | GET ALL",
+            "url": "http://localhost:8000/customers/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-30T17:48:29.964Z",
+            "modified": "2024-06-30T20:06:50.216Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "e1098dc6-69f5-4c52-b4af-3c7bba48b707",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "API |REFRESH TOKEN",
+            "url": "http://localhost:8000/token/refresh/",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2024-06-30T20:04:10.908Z",
+            "modified": "2024-06-30T20:04:26.630Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxOTg2NDI0NCwiaWF0IjoxNzE5Nzc3ODQ0LCJqdGkiOiIxNGQxYTRhMDEyMDQ0ZmQxYWM0YjE2MDM2ODFiN2FlZSIsInVzZXJfaWQiOjF9.7RR3y0oV0eCgUZXePOMz784CcqVl79K2NxVWEPBO37Y\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc3OTU1LCJpYXQiOjE3MTk3Nzc2NTUsImp0aSI6IjgxNWVmYTRjMDViNDRjNzliNjYwNTQwODEwY2ZkOTQ2IiwidXNlcl9pZCI6MX0.Dm3P7yPdQfaXojiwBaxC6Rbr9C7_I5AlsLIaWcu2lP8"
+            }
+        },
+        {
+            "_id": "e0e9493a-ae76-42b2-bb84-d4bf47e7177d",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Customer  | GET BY ID",
+            "url": "http://localhost:8000/customer/4/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-30T18:30:11.128Z",
+            "modified": "2024-06-30T20:07:04.896Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "11df9cb4-2abb-4d2b-a211-b3fc2e63440c",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Customer | UPDATE ",
+            "url": "http://localhost:8000/customer/4/",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-06-30T18:30:43.896Z",
+            "modified": "2024-06-30T20:07:17.646Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"first_name\": \"pepe\",\n    \"last_name\": \"morales\",\n    \"email\": \"epepe@example.com\",\n    \"phone_number\": \"32322\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "7cd5578c-ee65-4fc4-83bd-28fcc6243311",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Customer | ADD ",
+            "url": "http://localhost:8000/customer/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-06-30T18:32:26.747Z",
+            "modified": "2024-06-30T20:07:22.230Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"first_name\": \"Nombre del \",\n    \"last_name\": \"Apellido del Cliente\",\n    \"email\": \"correo@example.com\",\n    \"phone_number\": \"123456789\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "1e2fff9d-e4b0-4516-b6d4-6a769109c30c",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Customer | DELETE ",
+            "url": "http://localhost:8000/customer/4/",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-06-30T18:35:20.880Z",
+            "modified": "2024-06-30T20:07:45.666Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "d5e0b1f3-cc97-46f9-8c51-156134e72c71",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Address | GET BY CUSTOMER_ID",
+            "url": "http://localhost:8000/address/6/",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-06-30T19:04:15.299Z",
+            "modified": "2024-06-30T20:07:52.525Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "7c82bd90-9b12-40bc-b0e0-fe7fcf448447",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Address | ADD",
+            "url": "http://localhost:8000/address/",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-06-30T19:20:51.968Z",
+            "modified": "2024-06-30T20:08:01.623Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"customer_id\": 6,\n    \"address_line1\": \"123 Main St\",\n    \"address_line2\": \"Apt 101\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"postal_code\": \"12345\",\n    \"country\": \"USA\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "ba73237d-5374-4453-bec5-7877bac08c91",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Address | PUT",
+            "url": "http://localhost:8000/address/6/",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-06-30T19:23:05.442Z",
+            "modified": "2024-06-30T20:08:10.806Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"customer_id\": 6,\n    \"address_line1\": \"pepepepep\",\n    \"address_line2\": \"pepepepep\",\n    \"city\": \"pepepepep\",\n    \"state\": \"pepepepep\",\n    \"postal_code\": \"pepepepep\",\n    \"country\": \"pepepepep\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        },
+        {
+            "_id": "47c7545c-1ad3-493a-a307-09c8a7d9cfbe",
+            "colId": "a96bbd66-bdb7-4ad4-945e-34f8da154a3d",
+            "containerId": "",
+            "name": "Address | DELETE",
+            "url": "http://localhost:8000/address/7/",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-06-30T19:23:45.140Z",
+            "modified": "2024-06-30T20:08:15.164Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Nzc4MzA0LCJpYXQiOjE3MTk3NzgwMDQsImp0aSI6Ijk5N2M0Yjc0MjZjMDRiN2FiZDI4MzRkMmVkM2JiY2Q5IiwidXNlcl9pZCI6MX0.Hawdjyy4EN1xfL0INiDmGhYW9lh3oUQHCh03wSorX4Q"
+            }
+        }
+    ],
+    "ref": "w9t10un_AkA1-4d_CJY_niBUucvBZ9FET_iLSJa1wYZOD_W8eO0Z5aP41ey_pJz6R_oykf6kCLOG_6Wmwf-QRA"
+}

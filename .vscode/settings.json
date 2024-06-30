@@ -16,6 +16,7 @@
         "libpoppler",
         "poppler",
         "renv",
+        "Thunderclient",
         "venv",
         "virtualenv"
     ],

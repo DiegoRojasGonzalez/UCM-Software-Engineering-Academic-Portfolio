@@ -1,4 +1,10 @@
-# install project
+# Usage
+
+-   Para usar la api recomiendo exportar la coleccion de Thunderclient que eta en el proyecto en el archivo : `thunder-collection_Evaluation3BckendDiegoRojas.json`, luego importar en la app de Thunderbird.
+
+> Para usar el proyecto debes crear un usuario admin en Django para poder obtener tu token.
+
+# Install project
 
 -   up mysql database
 
@@ -28,11 +34,11 @@ pip install -r requirements.txt
 
 -   create super admin config
 
-`````sh
+```sh
 python3 manage.py createsuperuser
-````
+```
 
-````sh
+```sh
 
 Username : admin
 Email address: admin@admin.cl
@@ -52,7 +58,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-`````
+```
 
 -   models config on `/project/Customer/models.py`
 
