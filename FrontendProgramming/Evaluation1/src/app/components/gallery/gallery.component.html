@@ -1,0 +1,12 @@
+<section>
+  <ul class="mt-8 grid gap-4 grid-cols-4 w-full">
+
+    <li *ngFor="let item of Images">
+      <a href="#" class="group block overflow-hidden">
+        <img [src]="item.url" alt=""
+          class="h-[650px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+      </a>
+    </li>
+
+  </ul>
+</section>

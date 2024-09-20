@@ -1,0 +1,37 @@
+<h1 class="text-xl font-bold text-gray-900 sm:text-4xl text-center">No te pierdas nuestros proximos eventos!
+</h1>
+<article *ngFor="let item of Events" class="flex bg-white transition hover:shadow-xl my-8">
+  <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time datetime="2022-10-10"
+      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900">
+      <span>{{item.year}}</span>
+      <span class="w-px flex-1 bg-gray-900/10"></span>
+      <span>{{ item.month}} {{item.day}}</span>
+    </time>
+  </div>
+
+  <div class="hidden sm:block sm:basis-56">
+    <img alt="" [src]="item.image" class="aspect-square h-full w-full object-cover" />
+  </div>
+
+  <div class="flex flex-1 flex-col justify-between">
+    <div class="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+      <a href="#">
+        <h3 class="font-bold uppercase text-gray-900">
+          {{ item.title }}
+        </h3>
+      </a>
+
+      <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+        {{ item.description }}
+      </p>
+    </div>
+
+    <div class="sm:flex sm:items-end sm:justify-end">
+      <a href="https://maps.app.goo.gl/eQwqU3SNpL8WF1K88"
+        class="block bg-violet-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-violet-400">
+        Ver Ubicación
+      </a>
+    </div>
+  </div>
+</article>
