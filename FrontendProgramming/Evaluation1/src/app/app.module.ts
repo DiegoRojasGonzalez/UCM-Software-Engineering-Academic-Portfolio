@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { EventsComponent } from './components/events/events.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { MunicipalStaffComponent } from './components/municipal-staff/municipal-staff.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { EventsComponent } from './components/events/events.component';
     GalleryComponent,
     StatsComponent,
     EventsComponent,
+    BannerComponent,
+    MunicipalStaffComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
