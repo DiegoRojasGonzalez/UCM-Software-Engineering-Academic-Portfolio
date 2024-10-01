@@ -1,0 +1,16 @@
+<div *ngIf="email != ''">
+  <section *ngIf="isVisible" class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl p-8 text-center sm:p-12">
+      <p class="text-sm font-semibold uppercase tracking-widest text-violet-500">
+        Estás suscrito con el siguiente mail: {{ email }}
+      </p>
+
+      <h2 class="mt-6 text-3xl font-bold">¡Gracias por suscribirte al Newsletter!</h2>
+
+      <button (click)="closeModal()"
+        class="mt-8 inline-block w-full rounded-full bg-violet-600 py-4 text-sm font-bold text-white shadow-xl">
+        Entendido
+      </button>
+    </div>
+  </section>
+</div>
